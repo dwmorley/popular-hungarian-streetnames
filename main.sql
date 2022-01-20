@@ -31,12 +31,12 @@ create or replace function remove_fixes(road_name text) returns text as $$
 $$ language plpgsql;
 
 
-do $$
-declare
-
 
 -- count the streets into a new table called 'famous_counts'
 -- assumes 'public.planet_osm_line' has been correctly created by osm2pgsql
+do $$
+declare
+
 begin
 
 	drop table if exists roads;
